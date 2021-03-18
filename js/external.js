@@ -1,19 +1,26 @@
-"use strict";
+// alert("Hello from external Javascript!");
+// favoriteColor = prompt("What is your favorite color?");
+//
+// alert(favoriteColor + " is my favorite color too!");
 
-// var message = "Hello!"
-// var whatIsThisThen = "Have a great day"
-// var favoriteCheese = prompt("What is your favorite cheese?");
-//
-//
-// console.log(favoriteCheese + " happens to be their favorite cheese!");
-// var typeOfPrompt = typeof prompt("Tell me something!");
-// console.log(typeOfPrompt);
-//
-//
-// var num = parseFloat(prompt("Give me a number..."));
-// console.log("User entered: " + num + ". That number plus 17 is: " + (num + 17) + ".")
-//
-// var canIGoToTRS = confirm("Can I go to toys r us please?");
-// console.log(canIGoToTRS);
+// var mermaid = prompt("How many days do you need to rent The Little Mermaid?");
+// var brotherBear = prompt("And how many days do you need to rent Brother Bear?");
+// var hercules = prompt("And finally, how many days do you need to rent Herculese?");
+// var rentalRate = 3;
+// var totalDue = (mermaid * rentalRate) + (brotherBear * rentalRate) + (hercules * rentalRate);
+// alert("Thank you!")
+// alert("Each movie is $3 per day. Your total comes out to " + totalDue + " Thank you for renting a movie today!");
 
-alert("You're looking at a website!");
+alert("Please input your hours so we can calcutate your payment:");
+var firstJob = prompt("How many hours at Google?");
+alert("You worked " + firstJob + " hours at Google");
+var secondJob = prompt("How many hours at Amazon?");
+var thirdJob = prompt("How many hours at Facebook?");
+
+var firstJobPay = firstJob * 400;
+var secondJobPay = secondJob * 380;
+var thirdJobPay = thirdJob * 350;
+
+var totalJobPay = firstJobPay + secondJobPay + thirdJobPay;
+
+alert("Your total pay is: " + totalJobPay + " for those 3 jobs!");
