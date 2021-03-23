@@ -171,21 +171,45 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var participate = confirm("Would you like to enter a number?")
+//
+// var enterANumber = confirm("Would you like to enter a number?")
+// function analyzeNumber(enterANumber) {
+//     var enteredNumber = parseFloat(prompt("Please enter a number."));
+//     if(isNaN(enteredNumber)){
+//         return "You did not enter a number.";
+//     } else {
+//         if (enteredNumber % 2 === 0){
+//             var evenPlus = (enteredNumber + 100);
+//             return "Your number is even! " + enteredNumber + " plus 100 equals " + evenPlus + ".";
+//         } else {
+//             var oddPlus = (enteredNumber + 100);
+//             return "Your number is odd! " + enteredNumber + " plus 100 equals " + oddPlus + ". Thank you for playing."
+//         }
+//     }
+// }
+// console.log(analyzeNumber(enterANumber));
 
+var numberEntry;
 
-var enterANumber = confirm("Would you like to enter a number?")
-function analyzeNumber(enterANumber) {
-    var enteredNumber = parseFloat(prompt("Please enter a number."));
-    if(isNaN(enteredNumber)){
-        return "You did not enter a number.";
-    } else {
-        if (enteredNumber % 2 === 0){
-            var evenPlus = (enteredNumber + 100);
-            return "Your number is even! " + enteredNumber + " plus 100 equals " + evenPlus + ".";
-        } else {
-            var oddPlus = (enteredNumber + 100);
-            return "Your number is odd! " + enteredNumber + " plus 100 equals " + oddPlus + ". Thank you for playing."
-        }
+function isOddOrEven (numberEntry) {
+    return (numberEntry % 2 === 0)? "This number is even": "This number is odd";
+}
+
+function isNumberNegativeOrPositive (numberEntry) {
+    return (numberEntry > 0)? "this number is positive" : "This number is negative";
+}
+
+function pluss100 (numberEntry){
+    return "your number is " + (numberEntry + 100) + " it we added 100.";
+}
+if (participate){
+    numberEntry = prompt("Please enter a number:");
+    if (isNaN(numberEntry)){
+        alert("Sorry, that is not a number")
+} else {
+        alert(isOddOrEven(numberEntry));
+        alert(isNumberNegativeOrPositive(numberEntry));
+        alert(pluss100(numberEntry));
     }
 }
-console.log(analyzeNumber(enterANumber));
