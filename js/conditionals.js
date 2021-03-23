@@ -193,23 +193,27 @@ var participate = confirm("Would you like to enter a number?")
 var numberEntry;
 
 function isOddOrEven (numberEntry) {
-    return (numberEntry % 2 === 0)? "This number is even": "This number is odd";
+    return (numberEntry % 2 === 0) ? "This number is even." : "This number is odd.";
 }
 
-function isNumberNegativeOrPositive (numberEntry) {
-    return (numberEntry > 0)? "this number is positive" : "This number is negative";
+function isNegativeOrPostive(numberEntry) {
+    return (numberEntry > 0) ? "This number is positive." : "This number is negative";
 }
 
-function pluss100 (numberEntry){
-    return "your number is " + (numberEntry + 100) + " it we added 100.";
+function plus100 (numberEntry) {
+    return "Your number is " + (parseFloat(numberEntry) + 100) + " if we added 100."
 }
-if (participate){
-    numberEntry = prompt("Please enter a number:");
-    if (isNaN(numberEntry)){
-        alert("Sorry, that is not a number")
-} else {
+
+if(participate) {
+    numberEntry = prompt("Please enter a number.")
+    if (isNaN(numberEntry)) {
+        alert("Sorry, what you entered is not a number.");
+    } else {
         alert(isOddOrEven(numberEntry));
-        alert(isNumberNegativeOrPositive(numberEntry));
-        alert(pluss100(numberEntry));
+        alert(isNegativeOrPostive(numberEntry));
+        alert(plus100(numberEntry));
+
     }
+} else {
+    alert("Fine, bye!")
 }
