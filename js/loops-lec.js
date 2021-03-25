@@ -38,14 +38,37 @@
 //     }
 // }
 
+
+// while loops
+
 var counter = 8;
 while (counter >= 0){
     console.log(counter);
     counter = counter - 1;
 }
 
-//PseudoCode
 
+//do while loops
+
+var i = 10;
+
+do {
+    console.log('while loop iteration #' + i);
+    i++;
+} while (i < 10);
+
+
+// for loops
+
+for (var i = 4; i < 10; i++) {
+    console.log('for loop iteration #' + i);
+}
+
+// for loops example 2 (multiple variables separated by a comma
+
+for (var i = 0, j = 9; i < 10; i++, j--) {
+    console.log('for loop iteration #' + i + ', j = ' + j);
+}
 
 
 
