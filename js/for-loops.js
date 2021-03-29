@@ -32,6 +32,20 @@
 //     console.log(incNum);
 // }
 
+////Javier's method loop number triangle
+for (var i = 1; i < 10; i++) {
+    var number = i;
+// console.log(stringNumber);
+    var count = 0;
+    var outputString = "";
+    while(count < number) {
+        outputString = outputString + number.toString();
+        // console.log("Time " + count + " through the loop " + stringNumber);
+        count = count + 1;
+    }
+    console.log(outputString);
+}
+
 
 //for loop count by 5
 for (var i = 100; i >= 5; i = i - 5) {

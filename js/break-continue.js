@@ -21,3 +21,12 @@ while(true) {
         break;
     }
 }
+for (var i = 0; i <= 50; ++i){
+    if (i === userInputNum){
+        console.log("YIKES! Skipping number " + userInputNum)
+    } else if (i % 2 === 0){
+        continue;
+    } if (i === userInputNum){
+        continue;
+    } console.log("here is an odd number " + i);
+}
