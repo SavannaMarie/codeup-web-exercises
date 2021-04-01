@@ -12,4 +12,4 @@ var tacoma = {
         this.mileage++
     }
 
-}
+}   
