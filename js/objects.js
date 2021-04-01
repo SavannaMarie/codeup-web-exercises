@@ -36,7 +36,7 @@
         }
     }
 
-console.log(person.sayHello());
+person.sayHello();
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -59,9 +59,9 @@ console.log(person.sayHello());
     ];
     shoppers.forEach(function (shopper) {
         if(shopper.amount > 200) {
-            console.log(shopper.name + " has spent "+ shopper.amount +" therefore, will receive a 12% discount of $" + (shopper.amount * .12) + ". Making your total $" + (shopper.amount * .88))
+            console.log(shopper.name + " has spent "+ shopper.amount.toFixed(2) +" therefore, will receive a 12% discount of $" + (shopper.amount * .12).toFixed(2) + ". Making your total $" + (shopper.amount * .88).toFixed(2))
         } else {
-            console.log("Sorry " + shopper.name + " you only spent $"+ shopper.amount + " it looks like you won't be able to get a discount today because you need to spend at least $" + (200 - shopper.amount) + " to get the 12% discount");
+            console.log("Sorry " + shopper.name + " you only spent $"+ shopper.amount.toFixed(2) + " it looks like you won't be able to get a discount today because you need to spend at least $" + (200 - shopper.amount).toFixed(2) + " to get the 12% discount");
         }
     });
 
@@ -144,11 +144,7 @@ books.forEach(function(book, index){
     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
     console.log("---")
 })
-//     books.forEach(function(book, index) {
-//         console.log("Book # " + (index + 1));
-//         showBookInfo(book);
-//         console.log("---")
-//     });
+
 
     /**
      * Bonus:
@@ -160,6 +156,16 @@ books.forEach(function(book, index){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, authorFirstName, authorLastName) {
+        return {
+            title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
+        };
+    }
 
 })();
 
