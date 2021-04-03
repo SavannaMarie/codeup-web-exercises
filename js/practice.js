@@ -197,6 +197,21 @@ console.log(getRandomQuote());
 // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
 
+var fruits = [
+    "apple",
+    "banana",
+    "pear",
+    "strawberry",
+    "watermelon"
+]
+
+function getIndexesOf(letter, end){
+    var end = fruits.length;
+    var indexStop = fruits.indexOf(letter);
+    }
+console.log(getIndexesOf("n", "end"));
+
+
 // Exercise 9. Write a function named removeAll.
 // It should accept an array and a value
 // removeAll should return an array with all of the original contents EXCEPT for the provided value
