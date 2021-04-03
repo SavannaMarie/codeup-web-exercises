@@ -212,6 +212,8 @@ function getIndexesOf(letter, end){
 console.log(getIndexesOf("n", "end"));
 
 
+
+
 // Exercise 9. Write a function named removeAll.
 // It should accept an array and a value
 // removeAll should return an array with all of the original contents EXCEPT for the provided value
