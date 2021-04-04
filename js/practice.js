@@ -268,20 +268,33 @@ var mixedArray = [
     12
 ]
 function filterNumbers(array){
-    return array.filter(array => typeof array == "number").sort((a,b) =>a-b);
+    return array.filter(array => typeof array == "number").sort((a,b) => a-b);
 }
 console.log(filterNumbers(mixedArray));
 
 // Write a function, getOlder() that takes in array of dog objects and increases the value of each object's age property by 1.
 
-
-
-
-
-
-
-
-
+    var dogs = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ]
+dogs.forEach(function (dogAge) {
+    var newAge = dogs.age + 1;
+    dogs.push(newAge);
+ });
 
 
 
