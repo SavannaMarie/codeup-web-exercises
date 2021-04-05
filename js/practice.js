@@ -293,7 +293,7 @@ console.log(filterNumbers(mixedArray));
     ]
 console.log(dogs);
 
-dogs.forEach(function (dogAge) {
+dogs.slice().forEach(function (dogAge) {
     dogAge.age = dogAge.age + 1
   console.log(dogAge);
  });
