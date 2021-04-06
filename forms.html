@@ -5,17 +5,48 @@
     <title>Register with us</title>
 </head>
 <body>
-<form method="POST" action="https://request-inspector.glitch.me/">
+<header>
+    <H1>Register with us! </H1>
+    <p><hr style="height:1px;border-width:0;color:gray;background-color:gray"></p>
+</header>
+<main>
+    <section>
+        <form method="POST" action="https://www.elformo.com/forms/cf5fbe87-0332-4352-b6af-0173e3df50d0">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Your Email">
+            <br>
 
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text">
-    <br>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Your Password">
+            <br>
+            <label for="bio">Write a short bio about yourself</label>
+            <br>
+            <textarea id="bio" name="body" cols="30" rows="10"></textarea>
+            <br>
+            <h3>How'd you hear about us?</h3>
+            <label for="billboard">Billboard</label>
+            <input type="radio" id="billboard" name="advertisement" value="billboard">
+            <label for="internet">Internet</label>
+            <input type="radio" id="internet" name="advertisement" value="internet">
+            <label for="radio">Radio</label>
+            <input type="radio" id="radio" name="advertisement" value="radio">
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="advertisement" value="other">
+            <br>
+            <label for="browserType">What browser do you use?</label>
+            <select name="browserType" id="browserType">
+                <option value="Chrome">Chrome</option>
+                <option value="FireFox">FireFox</option>
+                <option value="Safari">Safari</option>
+                <option disabled value="Internet Explorer">Internet Explorer</option>
+            </select>
+            <br>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-    <br>
-
-    <input type="submit">
-</form>
+            <input name="newsletter" type="checkbox" checked><span>Would you like to sign up for our news letter?</span>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
+</main>
 </body>
 </html>
