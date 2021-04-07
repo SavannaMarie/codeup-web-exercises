@@ -299,11 +299,15 @@ dogs.slice().forEach(function (dogAge) {
  });
 
 
+function isANumber(num) {
+    return !isNaN(parseFloat(num));
+}
 
+if(!isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2)) && !isNaN(parseFloat(num3)))
 
-
-
-
+    function getsHighestNumber(x, y, z) {
+        return !isANumber(x) || !isANumber(y) || !isANumber(z) ? false : Math.max(x, y, z);
+    }
 
 
 
