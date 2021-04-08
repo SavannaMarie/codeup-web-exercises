@@ -1,13 +1,20 @@
-/*
-multi
-line
-comment
-*/
-
-.fancy-header, h3 {
-    color: #a04ba0; /* single line comment */
-    text-decoration: underline;
+body {
+    color: #160E16;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/background.jpeg);
+    background-attachment: fixed;
 }
-.p {
-
+.fancy-header {
+    color: #606C7C; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+#container {
+    position: absolute;
+    margin: 10px auto;
+    width: 640px;
+    padding: 10px;
+    left: 20%;
+    top: 100px;
+    background-color: #312134;
 }
