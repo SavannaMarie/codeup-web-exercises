@@ -189,6 +189,8 @@ function  getRandomQuote() {
 }
 
 console.log(getRandomQuote());
+console.log(getRandomQuote());
+console.log(getRandomQuote());
 
 // Exercise 8. Write a function named getIndexesOf() that takes in two arguments.
 // The first argument should be a specific numeral or character
@@ -197,20 +199,22 @@ console.log(getRandomQuote());
 // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
 
-var fruits = [
-    "apple",
-    "banana",
-    "pear",
-    "strawberry",
-    "watermelon"
-]
-
-function getIndexesOf(letter, end){
-    var end = fruits.length;
-    var indexStop = fruits.indexOf(letter);
-    }
-console.log(getIndexesOf("n", "end"));
-
+// var fruits = [
+//     "apple",
+//     "banana",
+//     "pear",
+//     "strawberry",
+//     "watermelon"
+// ]
+//
+// function getIndexesOf(array, value) {
+//     for (var i = 0; i < array.length; i++) {
+//         if (value === array[i]) {
+//             newArray.push(i);
+//         }
+//     }
+//     console.log(fruits)
+// }
 
 
 // Exercise 9. Write a function named removeAll.
@@ -220,6 +224,16 @@ console.log(getIndexesOf("n", "end"));
 // output array
 // Example: removeAll([1, 2, 3], 2) should return [1, 3]
 // Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
+
+function removeAll(array, value){
+    for (var i = 0; i < array.length; i++) {
+        if (value === array[i]) {
+            newArray.push(i);
+        }
+    }
+    console.log(fruits)
+
+}
 
 // Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
 
@@ -297,18 +311,18 @@ dogs.slice().forEach(function (dogAge) {
   console.log(dogAge);
  });
 
-
-function isANumber(num) {
-    return !isNaN(parseFloat(num));
-}
-
-if(!isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2)) && !isNaN(parseFloat(num3)))
-
-    function getsHighestNumber(x, y, z) {
-        return !isANumber(x) || !isANumber(y) || !isANumber(z) ? false : Math.max(x, y, z);
-    }
-
-
+//
+// function isANumber(num) {
+//     return !isNaN(parseFloat(num));
+// }
+//
+// if(!isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2)) && !isNaN(parseFloat(num3)))
+//
+//     function getsHighestNumber(x, y, z) {
+//         return !isANumber(x) || !isANumber(y) || !isANumber(z) ? false : Math.max(x, y, z);
+//     }
+//
+//
 
 
 
