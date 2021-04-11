@@ -199,13 +199,14 @@ console.log(getRandomQuote());
 // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
 
-// var fruits = [
-//     "apple",
-//     "banana",
-//     "pear",
-//     "strawberry",
-//     "watermelon"
-// ]
+var fruits = [
+    "apple",
+    "banana",
+    "pear",
+    "pear",
+    "strawberry",
+    "watermelon"
+]
 //
 // function getIndexesOf(array, value) {
 //     for (var i = 0; i < array.length; i++) {
@@ -225,14 +226,10 @@ console.log(getRandomQuote());
 // Example: removeAll([1, 2, 3], 2) should return [1, 3]
 // Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
 
-function removeAll(array, value){
-    for (var i = 0; i < array.length; i++) {
-        if (value === array[i]) {
-            newArray.push(i);
-        }
-    }
-    console.log(fruits)
-
+function removeAll(arr, value) {
+    return arr.filter(function(ele){
+        return ele !== value;
+    });
 }
 
 // Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
