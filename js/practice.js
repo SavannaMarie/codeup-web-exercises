@@ -1,48 +1,17 @@
 "use strict";
-
+function isANumber(num) {
+    return !isNaN(parseFloat(num));
+}
+function getsHighestNumber(x, y, z) {
+    return !isANumber(x) || !isANumber(y) || !isANumber(z) ? false : Math.max(x, y, z);
+}
 // function generates a random number that is both positive and even
-
 function randomPositiveEvenNumber(){
     var randomNumber = Math.ceil(Math.random() * 100) +10;
     if (randomNumber % 2 !==  0){
         return randomPositiveEvenNumber();
     }
     return randomNumber;
-}
-
-function plusFive(x){
-    return x + 5;
-}
-
-function AddOne(x){
-    return x + 1;
-}
-
-function isPositive(num){
-    return num > 0;
-}
-
-function isNegative(x){
-    return x < 0;
-}
-
-function isOdd(num){
-    return num % 2 !== 0;
-}
-
-function isEven(x){
-    return x % 2 === 0;
-}
-
-function isNegativeEven(x){
-    return x % 2 === 0 && x < 0;
-}
-function isMultipleOfThree(x){
-    return x % 3 === 0;
-}
-
-function isMultipleOfFive(x){
-    return x % 5 === 0;
 }
 
 function isMultipleOfThreeAndFive(x){
@@ -207,7 +176,7 @@ var fruits = [
     "strawberry",
     "watermelon"
 ]
-//
+// HAVING TROUBLE WITH THIS ONE
 // function getIndexesOf(array, value) {
 //     for (var i = 0; i < array.length; i++) {
 //         if (value === array[i]) {
@@ -308,18 +277,8 @@ dogs.slice().forEach(function (dogAge) {
   console.log(dogAge);
  });
 
-//
-// function isANumber(num) {
-//     return !isNaN(parseFloat(num));
-// }
-//
-// if(!isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2)) && !isNaN(parseFloat(num3)))
-//
-//     function getsHighestNumber(x, y, z) {
-//         return !isANumber(x) || !isANumber(y) || !isANumber(z) ? false : Math.max(x, y, z);
-//     }
-//
-//
+
+
 
 
 
