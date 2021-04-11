@@ -14,33 +14,7 @@ function randomPositiveEvenNumber(){
     return randomNumber;
 }
 
-function isMultipleOfThreeAndFive(x){
-    return x % 3 === 0 && x % 5 === 0;
-}
-
-function quotient(x,y){
-    return x/y;
-}
-
-function remainder(x,y){
-    return x % y;
-}
-
-function areaOfARectangle(width, length){
-    return width * length;
-}
-
-function isOneOrTwo(x){
-    return x == 1 || x == 2;
-}
-
-function isOneTwoOrThree(x){
-    return x ==1 || x == 2 || x == 3;
-}
-
-// Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-
 function isVowel(str) {
     var noCase = str.toLowerCase(str);
     return (
