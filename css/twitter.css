@@ -92,6 +92,7 @@ a {
 .profile {
     background: var(--light-bg);
     padding: 10px;
+    height: 80px;
 }
 .profile-items {
     padding: 0px;
