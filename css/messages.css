@@ -5,13 +5,11 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-div {
-    margin: 10px;
-    padding: 5px;
-}
 .message {
     border: 1px solid #dadada;
     border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 .message-info {
     color: #2c2387;
@@ -26,6 +24,6 @@ div {
     background-color: #fcfbce;
 }
 .message-error {
-    color: #671725;
+    color: #8f050a;
     background-color: #f4d4d7;
 }
