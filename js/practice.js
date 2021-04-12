@@ -177,12 +177,50 @@ function removeAll(arr, value) {
 
 // Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
 
+//CAN'T SEEM TO FIGURE IT OUT.
+// function fibonacciSequence(num){
+//     var a = 1, b = 0, temp;
+//
+//     while (num >= 0){
+//         temp = a;
+//         a = a + b;
+//         b = temp;
+//         num--;
+//     }
+//
+//     return b;
+// }
+// console.log(fibonacciSequence(10));
+//
+// function fibonacci(num) {
+//     for (var i = 0; i < num; i++) {
+//         if (num <= 1) {
+//             return 1;
+//         } else {
+//             return fibonacci(num - 1) + fibonacci(num - 2)
+//         }
+//     }
+// }
+// console.log(fibonacci(10));
 // Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci numbers
 
 // Exercise 12. Write a function named moveFirstToLast() that takes in an array
 // the function should return the array with the first element at the end
 // Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
 
+var hotels = [
+    "Marriot",
+    "Holiday Inn",
+    "Hyatt",
+    "The Omni",
+    "La Mansion"
+]
+console.log(hotels);
+
+function moveFirstToLast(arr){
+    return arr.push(arr.shift());
+}
+console.log(moveFirstToLast(hotels));
 
 // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
 // Zip returns a new array of arrays where each element is an array of the two elements at the same index
