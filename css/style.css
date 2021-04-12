@@ -28,6 +28,7 @@ h3 {
     border: 2px solid #373d20;
     text-align: center;
     width: 200px;
+    margin: 4px;
 }
 hr {
     height:2px;
@@ -52,6 +53,12 @@ a:hover {
 img {
     border: 5px solid #888d5a;
 }
-table {
+table, th, tr, td {
+    border: none;
     border-collapse: collapse;
+    padding: 2px;
+    margin: 5px 0 70px;
+}
+ul {
+    margin: 2px;
 }
