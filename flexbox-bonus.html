@@ -6,26 +6,33 @@
         <link rel="stylesheet" href="css/flexbox-bonus.css">
     </head>
     <body>
-        <table>
-            <tr>
-                <th><h3>Contact us</h3></th>
-            </tr>
-            <tr>
-                <td>Getting in touch is easy!</td>
-                <td>
+        <div class="container">
+            <div class="contact">
+                <h3>Contact us</h3>
+            </div>
+            <div class="contactInfo">
+                <div class="intouch">
+                    Getting in touch is easy!
+                </div>
+                t: +123 456 789<br>
+                123 Main Street Anywhere
+                <br><br>
+                General: fake@email.com<br>
+                Support: support@email.com
+            </div>
+            <div class="form">
                     <form method="POST" action="#">
-                    <input id="email" name="email" type="text" placeholder="Your Email">
+                    <input id="email" name="email" type="text" placeholder="Email">
                     <br>
-                    <input id="name" name="name" type="name" placeholder="Your Name">
+                    <input id="name" name="name" type="text" placeholder="Name">
                     <br>
-                    <input id="telephone" name="telephone" type="name" placeholder="Telephone">
+                    <input id="telephone" name="telephone" type="text" placeholder="Telephone">
                     <br>
-                    <textarea id="bio" name="body" cols="25" rows="5" placeholder="Comment"></textarea>
+                    <textarea id="bio" type="text"  name="body" cols="25" rows="5" placeholder="Comment"></textarea>
                     <br>
                     <input type="submit">
                     </form>
-                </td>
-            </tr>
-        </table>
+            </div>
+        </div>
     </body>
 </html>
