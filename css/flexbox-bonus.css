@@ -9,12 +9,12 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
-    height: 375px;
+    height: 350px;
     width: 70%;
-    padding: 4em;
+    padding: 2em 4em;
     background-color: #000000;
     background-image: url(../img/background2.jpeg);
-    background-repeat: repeat;
+    background-size: 100% 130%;
     background-position: center;
     border: none;
 }
@@ -27,27 +27,29 @@ body {
 }
 .contact>h3 {
     margin: 0 auto;
-    width: 35%;
     text-transform: uppercase;
     font-size: 2em;
+    text-align: center;
 }
 .intouch {
     font-size: 2em;
     letter-spacing: 2.5px;
     padding-bottom: 2em;
     width: 100%;
+    color: white;
 }
 .contactInfo {
     margin: -25px;
-    padding-right: 6em;
+    padding-right: 4em;
     font-size: 11px;
     align-self: flex-start;
-    width: 40%;
+    width: 50%;
+    color: #918e8e;
 }
 .form {
     margin: -25px;
-    padding-left: 10em;
-    width: 40%
+    padding-left: 6em;
+    width: 41%
 }
 input {
     background-color: #9d9595;
@@ -66,12 +68,20 @@ textarea {
     margin-top: 0px;
     background-color: #9d9595;
     width: 100%;
+    padding: 7px 0px 7px 7px;
     resize: none;
     color: white;
 }
 textarea::placeholder {
-    font-family: "Montserrat";
+    font: bold 11px 'Montserrat';
     color: #fff;
-    font-size: 11px;
-    font-weight: bold;
+}
+.button {
+    margin-top: 3px;
+    background: #f75700;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font: bold 11px 'Montserrat';
+    padding: 3px 4px;
 }
