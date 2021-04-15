@@ -71,6 +71,7 @@ textarea {
     padding: 7px 0px 7px 7px;
     resize: none;
     color: white;
+    border: none;
 }
 textarea::placeholder {
     font: bold 11px 'Montserrat';

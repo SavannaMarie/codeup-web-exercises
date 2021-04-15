@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
-* {
-    box-sizing: border-box;
-}
+
 body {
     margin: 0;
     font-family: 'Montserrat', Work Sans;
+    box-sizing: border-box;
 }
 nav {
     height: 4em;
@@ -19,7 +18,7 @@ nav ul {
     padding: 0;
     height: 100%;
 }
-nav li:not(.logo) {
+nav li{
     padding: 8px;
 }
 .logo {
