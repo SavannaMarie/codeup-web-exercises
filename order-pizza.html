@@ -46,51 +46,80 @@
 <!--    Build your Own Pizza-->
     <h2>Build your own pizza!</h2>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+        <li class="nav-item">
+            <a class="nav-link active" id="size-crust-tab" data-toggle="tab" href="#size-crust" role="tab"
+               aria-controls="size-crust" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size
+                and crust</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+        <li class="nav-item">
+            <a class="nav-link" id="cheese-sauce-tab" data-toggle="tab" href="#cheese-sauce" role="tab"
+               aria-controls="cheese-sauce" aria-selected="false"><span
+                    class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+        <li class="nav-item">
+            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings"
+               aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
-<!--Size cards-->
-            <div class="card" style="width: 18rem;">
-                <div class="card-header bg-primary text-white ">Choose size and crust</div><br>
-                <div class="card-header">
-                    Handtossed
+        <div class="tab-pane fade show active" id="size-crust" role="tabpanel" aria-labelledby="size-crust-tab">
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white ">Choose size and crust</div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="tossed-small" name="size-crust"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="tossed-small">Small (10")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="tossed-med" name="size-crust"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="tossed-med">Medium (12")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="crispy-med" name="size-crust"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="crispy-med">Medium (12")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="crispy-lg" name="size-crust"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="crispy-lg">Large (14")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p>Garlic seasoned crust with a rich, buttery taste.</p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <br><br>
-
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                    Featured
+                <div class="card-footer text-muted text-right">
+                    <a href="#" class="btn btn-primary">Next Step <i class="fas fa-angle-right"></i></a>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
             </div>
-        </div>
-        <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
-<!--Cheese Cards-->
-            Cheese
-
-
-        </div>
-        <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
-<!--Toppings cards-->
         </div>
     </div>
 </div>
@@ -99,5 +128,6 @@
 <!--Bootstrap script-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+
 </body>
 </html>
