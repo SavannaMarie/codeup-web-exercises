@@ -1,0 +1,26 @@
+H1{
+    text-align: center;
+}
+H2{
+    text-align: center;
+}
+H3 {
+    text-align: center;
+}
+.intro {
+    padding: 2em;
+}
+.intro li {
+    text-align: center;
+    list-style: none;
+}
+hr {
+    height: 3px;
+    border-width: 0;
+    background-color: #61673e;
+}
+H3 {
+    color: #5098e8;
+    text-align: left;
+    text-transform: uppercase;
+}
