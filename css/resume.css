@@ -7,9 +7,6 @@ H2{
 H3 {
     text-align: center;
 }
-.intro {
-    padding: 2em;
-}
 .intro li {
     text-align: center;
     list-style: none;
@@ -17,10 +14,10 @@ H3 {
 hr {
     height: 3px;
     border-width: 0;
-    background-color: #61673e;
+    background-color: #96a160;
 }
-H3 {
-    color: #5098e8;
+H4 {
+    color: #727949;
     text-align: left;
     text-transform: uppercase;
 }
