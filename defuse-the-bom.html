@@ -3,6 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Defuse the BOM</title>
+    <script>
+        $(function() {
+            $( "#dialog" ).dialog();
+        });
+    </script>
 </head>
 <body>
 
@@ -12,13 +17,12 @@
 <script>
 (function() {
     "use strict";
-
     var detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
         if (detonationTimer == 0) {
-            alert('EXTERMINATE!');
+            alert('💥💥💥💥💥EXTERMINATE! 💥💥💥💥💥');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
@@ -29,9 +33,10 @@
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    var diffuser = setInterval(updateTimer, 1000);
+    var stopBom = setInterval(updateTimer, 1000);
     function defuseTheBOM() {
-        clearInterval(diffuser);
+        clearInterval(stopBom);
+        alert("You diffused the BOM!! 💣💣💣💣");
     }
     // Don't modify anything below this line!
     //
