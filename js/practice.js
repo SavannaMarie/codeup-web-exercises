@@ -283,7 +283,17 @@ dogs.slice().forEach(function (dogAge) {
 
 
 
+/* Event Listener
+# = id
+. = class
 
+ */
+
+// target.addEventListener('type', listener);
+//
+// document.addEventListener('click', function() {
+//     document.querySelector("")
+// }
 
 
 
