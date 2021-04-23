@@ -49,15 +49,10 @@
         for (var i = 0; i < listItems.length; i++) {
             if ((i+1) % 2 === 0) {
                 listItems[i].style.color = 'grey';
-            }
-        }
-
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute('data-dbid') === '1') {
+            } else if (listItems[i].getAttribute('data-dbid') === '1') {
                 listItems[i].style.color = 'blue';
             }
         }
-
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
