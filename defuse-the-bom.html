@@ -22,7 +22,14 @@
     // TODO: This function needs to be called once every second
     function updateTimer() {
         if (detonationTimer == 0) {
-            alert('💥💥💥💥💥EXTERMINATE! 💥💥💥💥💥');
+            alert('⁣⁣◼️◼️◼️◼️◼️◼️◼️◼️\n' +
+                '◼️◼️◼️🌟◼️◼️◼️◼️\n' +
+                '◼️◼️🌟🌟🌟🌟◼️◼️\n' +
+                '◼️🌟💥💥🌟💥✨◼️\n' +
+                '◼️◼️🌟🌟💥🌟◼️◼️\n' +
+                '◼️◼️◼️⁣🌟🌟◼️◼️◼️\n' +
+                '◼️◼️◼️◼️◼️◼️◼️◼️\n' +
+                '◼️◼️◼️◼️◼️◼️◼️◼️');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
