@@ -1,3 +1,2 @@
-$("h3").click(function () {
-    $(this).next().slideToggle(500);
-});
+
+$("h3").html("I am altering this html!");
