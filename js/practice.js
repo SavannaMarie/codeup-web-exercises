@@ -296,4 +296,37 @@ dogs.slice().forEach(function (dogAge) {
 // }
 
 
+function countVowels(str) {
+    var vowelsCount = 0;
+    var string = str.toString();
+    for (var i = 0; i <= string.length - 1; i++) {
+        if (string.charAt(i) === "a" || string.charAt(i) === "e" || string.charAt(i) === "i" || string.charAt(i) === "o" || string.charAt(i) === "u") {
+            vowelsCount += 1;
+        }
+    }
+    return vowelsCount;
+}
+function analyzeWord(str) {
+    var analyze = {
+        word: str,
+        numberOfVowels: countVowels(str),
+        numberOfLetters: str.length
+    }
+    return analyze;
+}
+function capitalizeName(str) {
+    var secondWord = str.indexOf(' ') + 1;
+    var firstName = str.charAt(0).toUpperCase() + str.slice(1, secondWord);
+    var secondName = str.charAt(secondWord).toUpperCase() + str.slice(secondWord + 1);
+    return firstName.concat(secondName);
+}
+function convertNameToObject(firstNamelastName) {
+    var name = firstNamelastName.split(" ")
+    return {
+        firstName: name[0],
+        lastName: name[name.length -1]
+    }
+}
+
+
 
