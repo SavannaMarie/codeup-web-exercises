@@ -1,2 +1,3 @@
 
-$("h3").html("I am altering this html!");
+var contents = $('#codeup').html();
+alert(contents);

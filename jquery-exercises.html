@@ -2,25 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Exercises</title>
+    <title>jQuery</title>
+    <link rel="script" href="css/jquery-intro.css">
 </head>
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti esse laboriosam magni vitae. Ab amet consectetur eius impedit porro, rem rerum voluptates? Deleniti fugit libero possimus quis, ratione rem.
-</p>
-<h1>This is a header!!</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae dolores ducimus, eaque eius, eligendi enim esse est excepturi molestiae nesciunt nobis numquam quaerat sed ut. Dicta id molestias nobis.
-</p>
-<h1>This is a header as well!!!</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae dolores ducimus, eaque eius, eligendi enim esse est excepturi molestiae nesciunt nobis numquam quaerat sed ut. Dicta id molestias nobis.
-</p>
+    <h1 id="loveJquery">I love jQuery!</h1>
+    <ul class="animals" id="animal-list">
+        <li id="animal1" class="codeup">cat</li>
+        <li id="animal2" class="codeup">dog</li>
+        <li id="animal3" class="codeup">horse</li>
+    </ul>
+    <p id="id1" class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, quidem!</p>
+    <p id="id2" class="lorem">Lorem ipsum dolor sit amet, consectetur</p>
+    <p id="id3" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores autem dicta eius
+        eum excepturi facilis illo ipsa labore modi mollitia neque nihil numquam perspiciatis quibusdam quod sit totam,
+        voluptatem.</p>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".codeup").click(function(){
+                $(".codeup").css("border", "1px solid red");
+            });
+            $("li").hover(function(){
+                $("li").css("color", "rebeccapurple");
+            },function(){
+                $("li").css("color", "black");
+            })
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="js/jquery-intro.js"></script>
-<script>
-    $(document).ready(function($) {
-            alert("js is working");
         });
-</script>
+    </script>
+    <script>
+        var contents = $('#animal-list').text();
+        alert(contents);
+    </script>
 </body>
 </html>
+
 
