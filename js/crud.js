@@ -60,3 +60,20 @@ function render() {
 
     }
 }
+// create text node
+const text = document.createElement("p");
+text.innerText = todoList[i].text;
+
+// create delete button
+const button = document.createElement("button");
+button.innerText = "X";
+button.addEventListener("click", function () {
+    todoList.splice(i, 1);
+    localStorage.setItem("todos", JSON.stringify(todoList));
+    render();
+});
+// item.appendChild(checkbox);
+// item.appendChild(text);
+// item.appendChild(button);
+// todo.appendChild(item);
+// input.value = null;
