@@ -72,8 +72,8 @@ button.addEventListener("click", function () {
     localStorage.setItem("todos", JSON.stringify(todoList));
     render();
 });
-// item.appendChild(checkbox);
-// item.appendChild(text);
-// item.appendChild(button);
-// todo.appendChild(item);
-// input.value = null;
+item.appendChild(checkbox);
+item.appendChild(text);
+item.appendChild(button);
+todo.appendChild(item);
+input.value = null;
