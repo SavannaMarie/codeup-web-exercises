@@ -8,7 +8,7 @@ $(document).keyup(function(event){
 // stop logging once done
     passwordEntered = passwordEntered.slice(-10);
 // check if passcode is correct
-    if(passwordEntered.join('') === password.join('')) {
+    if(passwordEntered.join(" ") === password.join(" ")) {
         setTimeout(function () {
             document.querySelector("link[href='css/konami.css']").href = "css/konami2.css";
         }, 500);
