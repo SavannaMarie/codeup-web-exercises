@@ -1,12 +1,12 @@
 "use strict";
 
 var passwordEntered = [];
-var password = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+var password = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 $(document).keyup(function(event){
 //log the keys
     passwordEntered.push(event.keyCode);
 // stop logging once done
-    passwordEntered = passwordEntered.slice(-10);
+    passwordEntered = passwordEntered.slice(-11);
 // check if passcode is correct
     if(passwordEntered.join(" ") === password.join(" ")) {
         setTimeout(function () {
