@@ -1,3 +1,3 @@
 
-var contents = $('#codeup').html();
-alert(contents);
+// var contents = $('#codeup').html();
+// alert(contents);

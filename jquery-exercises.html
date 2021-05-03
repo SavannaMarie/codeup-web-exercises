@@ -20,19 +20,16 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
-            $("H1").click(function(){
-                $("H1").css("background-color", "red");
-            });
-            $("li").hover(function(){
-                $("li").css("color", "rebeccapurple");
-            },function(){
-                $("li").css("color", "black");
-            })
-            $("p").click(function(){
-                $(this).css("font-size", "18px");
-            });
-
+        $("H1").click(function(){
+            $("H1").css("background-color", "rebeccapurple");
+        });
+        $("li").hover(function(){
+            $("li").css("color", "rebeccapurple");
+        },function(){
+            $("li").css("color", "black");
+        })
+        $("p").dblclick(function(){
+            $(this).css("font-size", "18px");
         });
     </script>
 <!--    <script>-->
