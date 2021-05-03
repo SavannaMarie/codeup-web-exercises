@@ -21,21 +21,24 @@
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $(".codeup").click(function(){
-                $(".codeup").css("border", "1px solid red");
+            $("H1").click(function(){
+                $("H1").css("background-color", "red");
             });
             $("li").hover(function(){
                 $("li").css("color", "rebeccapurple");
             },function(){
                 $("li").css("color", "black");
             })
+            $("p").click(function(){
+                $(this).css("font-size", "18px");
+            });
 
         });
     </script>
-    <script>
-        var contents = $('#animal-list').text();
-        alert(contents);
-    </script>
+<!--    <script>-->
+<!--        var contents = $('#animal-list').text();-->
+<!--        alert(contents);-->
+<!--    </script>-->
 </body>
 </html>
 

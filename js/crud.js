@@ -2,6 +2,8 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const button = document.getElementById("button");
 const todo = document.getElementById("todo");
+const inputElement = document.getElementById("input");
+console.log(inputElement);
 let todoList = [];
 
 form.addEventListener("submit", function (e) {
@@ -60,20 +62,3 @@ function render() {
 
     }
 }
-// create text node
-const text = document.createElement("p");
-text.innerText = todoList[i].text;
-
-// create delete button
-const button = document.createElement("button");
-button.innerText = "X";
-button.addEventListener("click", function () {
-    todoList.splice(i, 1);
-    localStorage.setItem("todos", JSON.stringify(todoList));
-    render();
-});
-item.appendChild(checkbox);
-item.appendChild(text);
-item.appendChild(button);
-todo.appendChild(item);
-input.value = null;
