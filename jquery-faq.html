@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <title>JQuery</title>
     <style>
+        body {
+            padding: 30px;
+            font-family: 'Work Sans', sans-serif;
+        }
         .invisible {
             visibility: hidden;
+        }
+        .highlight {
+            background-color: #0fb784;
+        }
+        dd {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -43,19 +53,17 @@
 
     <dt>What is the most-visited national park?</dt>
     <dd>Blue Ridge Parkway</dd>
-    <button class="button">Click me!</button>
+    <button class="button">Click me!</button><br>
+    <button class="button2">Click me!</button>
 
 </dl>
 <script src="js/jquery.js"></script>
 <script>
-    $('dd').addClass('invisible');
-
     $('.button').click(function(){
         $('dd').toggleClass('invisible');
     });
-    $('dt').click(function(){
-
-        $(this).css('background-color', "yellow");
+    $('.button2').click(function(){
+        $('dt').toggleClass('highlight');
     });
 
 </script>
