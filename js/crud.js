@@ -2,8 +2,6 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const button = document.getElementById("button");
 const todo = document.getElementById("todo");
-const inputElement = document.getElementById("input");
-console.log(inputElement);
 let todoList = [];
 
 form.addEventListener("submit", function (e) {
@@ -24,8 +22,10 @@ function addTodo() {
     // add the todo list to localstorage
     localStorage.setItem("todos", JSON.stringify(todoList));
     // render todo list
+
     render();
 }
+
 function render() {
     // clear the list
     todo.innerHTML = null;
@@ -37,6 +37,7 @@ function render() {
     for (let i = 0; i < todoList.length; i++) {
 
         const item = document.createElement("li");
+
 
         // create checkbox to update completed state
         const checkbox = document.createElement("input");
@@ -57,8 +58,23 @@ function render() {
                 item.classList.remove("completed");
                 checkbox.checked = todoList[i].completed;
             }
-
         });
+        // create text node
+        const text = document.createElement("p");
+        text.innerText = todoList[i].text;
 
+        // create delete button
+        const button = document.createElement("button");
+        button.innerText = "X";
+        button.addEventListener("click", function () {
+            todoList.splice(i, 1);
+            localStorage.setItem("todos", JSON.stringify(todoList));
+            render();
+        });
+        item.appendChild(checkbox);
+        item.appendChild(text);
+        item.appendChild(button);
+        todo.appendChild(item);
+        input.value = null;
     }
 }

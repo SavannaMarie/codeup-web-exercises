@@ -1,5 +1,4 @@
 "use strict";
-
 var passwordEntered = [];
 var password = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 $(document).keyup(function(event){
@@ -24,6 +23,6 @@ $(document).keyup(function(event){
             $("#garden-text").text("Please enjoy our garden and remember to keep it a secret!");
         }, 5000);
     // fades out the text-box
-         $(".garden-text").delay(8000).fadeOut();
+         $(".garden-text").delay(9500).fadeOut();
     }
 });
