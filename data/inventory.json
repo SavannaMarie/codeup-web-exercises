@@ -45,5 +45,12 @@
             "tool"
         ],
         "price": 5
+    }, {
+    "title": "Duct Tape",
+    "quantity": 1,
+    "categories": [
+        "tool"
+    ],
+    "price": 3
     }
 ]
