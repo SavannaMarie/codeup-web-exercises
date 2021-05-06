@@ -1,0 +1,10 @@
+body {
+    background: #3c3c55;
+    color: #282828;
+    margin-bottom: 2em;
+}
+.posts {
+    background: #67678e;
+    border: 1px #6f6fae solid;
+    padding: 10px 10px 4em;
+}
