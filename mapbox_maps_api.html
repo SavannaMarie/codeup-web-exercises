@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API exercise</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id='map' style='width: 600px; height: 500px;'></div>
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+
+   // Instantiation of Map Object
+   mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+   var map = new mapboxgl.Map({
+       container: 'map', // container ID
+   });
+
+   map.setStyle('mapbox://styles/mapbox/dark-v10')
+   map.setZoom(15)
+   map.setCenter([-98.4906, 29.4280])
+
+
+   map.addControl(new mapboxgl.NavigationControl());
+
+   // Instantiation of Marker Object
+
+   var marker = new mapboxgl.Marker({
+       color: 'purple',
+   })
+       .setLngLat([-98.4915416, 29.4285578])
+       .setDraggable(true)
+       .addTo(map);
+
+   marker.on('dragend', function() {
+       $('h1').html(marker.getLngLat().toString());
+       marker.setPopup();
+   })
+
+   // Instantiation of Popup object
+
+   var popup = new mapboxgl.Popup()
+       .setLngLat(marker.getLngLat())
+       .setHTML("<h3>Kimura!</h3>")
+       .setMaxWidth("300px")
+   $(marker).click(function(){
+       popup.addTo(map);
+   })
+
+
+   marker.setPopup(popup);
+</script>
+
+
+
+
+
+
+</body>
+</html>
