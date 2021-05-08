@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id='map' style='width: 700px; height: 700px;'></div>
+<div id='map' style='width: 600px; height: 500px;'></div>
 
 
 
@@ -17,40 +17,51 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script>
 
-    // LOADS MAP
-    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center: [-98.4936, 29.4241],
-        zoom: 11
-    });
+   // Instantiation of Map Object
+   mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+   var map = new mapboxgl.Map({
+       container: 'map', // container ID
+   });
 
-    // MY FAVORITE SPOTS
-    var faveSpots = [
-        {
-            name: 'Kimura Japanese cuisine',
-            location: '152 East Pecan Street, San Antonio, TX 78205, United States ',
-        },
-        {
-            name: 'Hoffbrau Beer Garden',
-            location: '7310 Jones Maltsberger Rd, San Antonio, TX 78209',
-        }
-    ];
+   map.setStyle('mapbox://styles/mapbox/dark-v10')
+   map.setZoom(15)
+   map.setCenter([-98.4906, 29.4280])
 
-    // DISPLAYS FAVORITE SPOTS ON MAP
-    faveSpots.forEach(function(restaurant) {
-        geocode(restaurant.location, MAPBOX_ACCESS_TOKEN).then(function(position) {
-            var popup = new mapboxgl.Popup()
-                .setHTML('<h3>' + restaurant.name + '</h3>');
-            var marker = new mapboxgl.Marker()
-                .setLngLat(position)
-                .addTo(map)
-                .setPopup(popup);
-        });
-    });
 
+   map.addControl(new mapboxgl.NavigationControl());
+
+   // Instantiation of Marker Object
+
+   var marker = new mapboxgl.Marker({
+       color: 'purple',
+   })
+       .setLngLat([-98.4915416, 29.4285578])
+       .setDraggable(true)
+       .addTo(map);
+
+   marker.on('dragend', function() {
+       $('h1').html(marker.getLngLat().toString());
+       marker.setPopup();
+   })
+
+   // Instantiation of Popup object
+
+   var popup = new mapboxgl.Popup()
+       .setLngLat(marker.getLngLat())
+       .setHTML("<h3>Kimura!</h3>")
+       .setMaxWidth("300px")
+   $(marker).click(function(){
+       popup.addTo(map);
+   })
+
+
+   marker.setPopup(popup);
 </script>
+
+
+
+
+
 
 </body>
 </html>
