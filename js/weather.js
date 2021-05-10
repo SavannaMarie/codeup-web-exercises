@@ -1,7 +1,4 @@
 "use strict";
-
-
-
 function weather(city) {
     var search = city.toString();
     var currentWeather = [];
@@ -11,7 +8,6 @@ function weather(city) {
         units: "imperial"
     }).done(function (data) {
         var temp = Math.round(data.main.temp);
-        console.log(temp)
         var clouds = data.weather[0].description;
         var newText = document.createTextNode(clouds);
         var newP = document.createElement('p');
@@ -22,7 +18,13 @@ function weather(city) {
     var searchResult = city;
 }
 
-weather('San Antonio');
+var button = document.querySelector('#button')
+button.addEventListener('click', function (e) {
+    e.preventDefault();
+    var newSearch = document.querySelector('#weatherSearch').value;
+    weather(newSearch);
+});
+
 
 
 
