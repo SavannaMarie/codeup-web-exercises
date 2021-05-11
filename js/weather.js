@@ -1,4 +1,6 @@
 "use strict";
+
+
 // This function gets the weather for each day'
 $(document).ready(function() {
     var coordinates = {
@@ -34,9 +36,17 @@ $(document).ready(function() {
     }
 getWeather(coordinates);
 
+// function to capitalize each word
+    function capitalize(words) {
+        var separateWord = words.toLowerCase().split(' ');
+        for (var i = 0; i < separateWord.length; i++) {
+            separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+                separateWord[i].substring(1);
+        }
+        return separateWord.join(' ');
+    }
 
-
-// gets today's weather
+// quick search
     function weather(city) {
         var search = city.toString();
         var currentWeather = [];
@@ -45,11 +55,25 @@ getWeather(coordinates);
             q: search,
             units: "imperial"
         }).done(function (data) {
-            var temp = Math.round(data.main.temp);
+            var displayWeather ="";
+            var name = data.name;
+            var iconImage = "";
+            iconImage += `<img style='margin: auto' width="30px" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png\n"/>`
             var clouds = data.weather[0].description;
-            var newText = document.createTextNode(clouds);
-            var newP = document.createElement('p');
-            $('#navSearch').html(searchResult + "<br>" + clouds + '<br>' + temp);
+            var newClouds = capitalize(clouds);
+
+            displayWeather += `<p>`
+            displayWeather += `<b>${name}:</b>  `
+            displayWeather += ` Temp: ${Math.round(data.main.temp)}°F `
+            displayWeather += `${newClouds}`
+            displayWeather += `${iconImage}`
+            displayWeather += ` Humidity: ${data.main.humidity}%`
+            displayWeather += `</p>`
+
+
+
+
+            $('#navSearch').html(displayWeather);
             console.log(data);
 
         });
