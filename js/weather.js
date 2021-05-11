@@ -1,6 +1,4 @@
 "use strict";
-
-
 // This function gets the weather for each day'
 $(document).ready(function() {
     var coordinates = {
@@ -32,6 +30,7 @@ $(document).ready(function() {
                     displayWeather += `</p></div>`
                     $('#containerMain').html(displayWeather);
                 }
+                console.log(city);
             });
     }
 getWeather(coordinates);
@@ -55,6 +54,11 @@ getWeather(coordinates);
             q: search,
             units: "imperial"
         }).done(function (data) {
+            var today = new Date();
+            var hours = today.getHours();
+            var ampm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            var time = hours  + ":" + today.getMinutes() + " " + ampm;
             var displayWeather ="";
             var name = data.name;
             var iconImage = "";
@@ -63,23 +67,18 @@ getWeather(coordinates);
             var newClouds = capitalize(clouds);
 
             displayWeather += `<p>`
-            displayWeather += `<b>${name}:</b>  `
+            displayWeather += `<b>${name}: </b> ${time}  `
             displayWeather += ` Temp: ${Math.round(data.main.temp)}°F `
             displayWeather += `${newClouds}`
             displayWeather += `${iconImage}`
-            displayWeather += ` Humidity: ${data.main.humidity}%`
+            displayWeather += ` Hi: ${Math.round(data.main.temp_max)}°F Lo: ${Math.round(data.main.temp_min)}°F`
+            displayWeather += ` Humidity: ${data.main.humidity}% `
             displayWeather += `</p>`
-
-
-
-
             $('#navSearch').html(displayWeather);
-            console.log(data);
-
+            // console.log(data);
         });
         var searchResult = city;
     }
-
     var button = document.querySelector('#button')
     button.addEventListener('click', function (e) {
         e.preventDefault();
@@ -87,13 +86,7 @@ getWeather(coordinates);
         weather(newSearch);
     });
 
-
-
-
-
-
 // Attatch a map
-// Instantiation of Map Object
     mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
     var map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -103,15 +96,13 @@ getWeather(coordinates);
     map.setCenter([-98.4916, 29.4252])
     map.addControl(new mapboxgl.NavigationControl());
 
-    // Instantiation of Marker Object
+//Marker Object
     var marker = new mapboxgl.Marker({
         color: 'lightblue',
     })
         .setLngLat([-98.4861, 29.4260])
         .setDraggable(true)
         .addTo(map);
-
-
     marker.on('dragend', function() {
         var lngLat = marker.getLngLat();
         getWeather(lngLat)
