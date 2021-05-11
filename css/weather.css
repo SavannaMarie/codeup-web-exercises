@@ -4,3 +4,24 @@ body {
 p {
     font-size: 12px;
 }
+.topNav {
+    background: #bcbcbc;
+    background: -moz-linear-gradient(-45deg,  #bcbcbc 0%, #4c4c4c 100%);
+    background: -webkit-linear-gradient(-45deg,  #bcbcbc 0%,#4c4c4c 100%);
+    background: linear-gradient(135deg,  #bcbcbc 0%,#4c4c4c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#4c4c4c',GradientType=1 );
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-text {
+    margin-right: 0px;
+    justify-self: end;
+}
+.navSearch {
+    font-size: 16px;
+
+}
