@@ -1,10 +1,13 @@
 "use strict";
-// This function gets the weather for each day'
 $(document).ready(function() {
+// center the map
     var coordinates = {
         lat: 29.4241,
         lng: -98.4936
     }
+
+// This function gets the weather for each day'
+// Display the 5 day forecast
     function getWeather(coordinates) {
         $.get('https://api.openweathermap.org/data/2.5/onecall', {
             APPID: WEATHER_MAP_TOKEN,
@@ -13,11 +16,12 @@ $(document).ready(function() {
             units: "imperial"
         })
             .done(function (city) {
-// Display the 5 day forecast
+                console.log(city)
                 var displayWeather = '';
                 for (var n = 0; n < 5; n++) {
                     var date = city.daily[n];
                     var displayDate = new Date(date.dt * 1000).toDateString();
+// String literals with string interpolation
                     displayDate = displayDate.slice(0, displayDate.length - 4)
                     displayWeather += `<div class= "card w-25 m-2 col">`
                     displayWeather += `${displayDate}<br>`
@@ -29,9 +33,10 @@ $(document).ready(function() {
                     displayWeather += `</p></div>`
                     $('#containerMain').html(displayWeather);
                 }
-                console.log(city);
             });
     }
+
+// sets the marker on san antonio by default
 getWeather(coordinates);
 
 // function to capitalize each word
@@ -52,6 +57,7 @@ getWeather(coordinates);
             q: search,
             units: "imperial"
         }).done(function (data) {
+            console.log(data)
             var today = new Date();
             var hours = today.getHours();
             var ampm = hours >= 12 ? 'pm' : 'am';
@@ -59,7 +65,7 @@ getWeather(coordinates);
             var time = hours  + ":" + today.getMinutes() + " " + ampm;
             var displayWeather ="";
             var iconImage = "";
-            iconImage += `<img style='margin: auto' width="30px" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png\n"/>`
+            iconImage += `<img style='margin: auto' class="icon" width="30px" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png\n"/>`
             var clouds = data.weather[0].description;
             var newClouds = capitalize(clouds);
 
@@ -72,15 +78,18 @@ getWeather(coordinates);
             displayWeather += ` Humidity: ${data.main.humidity}% `
             displayWeather += `</p>`
             $('#navSearch').html(displayWeather);
-            console.log(data);
         });
     }
+
+
+
     var button = document.querySelector('#button')
     button.addEventListener('click', function (e) {
         e.preventDefault();
         var newSearch = document.querySelector('#weatherSearch').value;
         weather(newSearch);
     });
+weather('San Antonio')
 
 // Attatch a map
     mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
@@ -88,7 +97,7 @@ getWeather(coordinates);
         container: 'map', // container ID
     });
     map.setStyle('mapbox://styles/mapbox/dark-v10')
-    map.setZoom(9)
+    map.setZoom(10)
     map.setCenter([-98.4916, 29.4252])
     map.addControl(new mapboxgl.NavigationControl());
 
@@ -103,47 +112,29 @@ getWeather(coordinates);
         var lngLat = marker.getLngLat();
         getWeather(lngLat)
     })
-    // Popup object
-
-    var popup = new mapboxgl.Popup()
-        .setLngLat(marker.getLngLat())
-        .setHTML("<p>Your Location</p>")
-        .setMaxWidth("200px")
-        .addTo(map);
-
-    console.log(popup)
-
-    marker.setPopup(popup);
 
     function mapSearch(input) {
-        var search = input.toString();
-        $.get("http://api.openweathermap.org/data/2.5/weather", {
-            APPID: WEATHER_MAP_TOKEN,
-            q: search,
-            units: "imperial"
-        }).done(function (data) {
-           var coords = data.coord
-           var name = data.name;
-            console.log(data);
-            console.log(coords);
-            console.log(name);
-        });
+        geocode(input, MAPBOX_ACCESS_TOKEN).then(function (results){
+            marker.setLngLat(results);
+            map.flyTo({
+            center: [results[0], results[1]],
+            zoom: 8,
+            speed: 1,
+            essential: true,
+            });
+            var newCoords = {
+                lat: results[1],
+                lng: results[0]
+            }
+            getWeather(newCoords);
+        })
     }
     var button2 = document.querySelector('#btn')
     button2.addEventListener('click', function (e) {
         e.preventDefault();
         var searchResult = document.querySelector('#mapSearch').value;
     mapSearch(searchResult);
+        console.log(searchResult)
     });
-
-    // var popup2 = new mapboxgl.Popup()
-    //     .setLngLat(mapSearch());
-    //     .setHTML("<p>Your Location</p>")
-    //     .setMaxWidth("200px")
-    //     .addTo(map);
-    //
-    // console.log(popup)
-    //
-    // marker.setPopup(popup);
 });
 

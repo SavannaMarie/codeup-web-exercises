@@ -10,7 +10,7 @@
 <body>
 <nav class="navbar navbar-expand topNav p-1 w-100 m-0">
 <!--quick search-->
-    <h2 class="">Most recent weather!</h2>
+    <h2 class="heading">Most recent weather</h2>
     <div class="navbar-nav mr-0 citySearch">
         <div class="navbar-text ">
             <form id="searchForm" class="d-flex">
@@ -30,21 +30,31 @@
 </nav>
 <!--forecast-->
     <div id="container" class="container">
-        <h2>5 Day Forecast:</h2>
-        <div id="containerMain" class="d-flex justify-content-center">
-        </div>
-        <div id='map' style='width: 400px; height: 400px;' class=""></div>
-        <form id="mapForm" class="d-flex mt-2">
-            <input type="text" id="mapSearch"  placeholder="Search the forecast">
-            <button type="submit" id="btn" class="btn-2">Search!</button>
+        <div class="row w-100">
+            <h2 class="col-9 fiveday">5 Day Forecast:</h2>
+            <form id="mapForm" class="d-flex mt-2 col-2 float-right">
+                <input type="text" id="mapSearch" class="inputSearch2" placeholder="Search the forecast">
+                <button type="submit" id="btn" class="btn-2 btn-1">Search!</button>
         </form>
+        </div>
+        <div id="containerMain" class="d-flex justify-content-center slide">
+        </div>
+        <div class="row">
+            <div id='map'  style='height: 45vh;' class="m-auto w-100">
+        </div>
+        </div>
     </div>
 
+<!--bottom nav bar-->
+<nav class="navbar fixed-bottom topNav">
+    <p id="navBottom"></p>
+</nav>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather.js"></script>
 
 </body>

@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 body {
     margin-bottom: 3em;
+    font-family: 'Montserrat', sans-serif;
 }
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.fiveday {
+    font-weight: bold;
+  }
 p {
     font-size: 12px;
 }
@@ -27,6 +39,16 @@ p {
     margin-right: 3px;
     padding: 4px;
 }
+.inputSearch2 {
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #9d9d9d;
+    padding: 4px;
+
+}
+
 .inputSearch:focus {
     background-color: white;
 }
@@ -59,4 +81,21 @@ p {
 .smallNav {
     background: #a3a3a3;
     border-bottom: 1px solid #747474;
+}
+h2 {
+    display: flex;
+}
+.card {
+    margin-bottom: 10px;
+    -moz-box-shadow:    4px 2px 4px 1px #ccc;
+    -webkit-box-shadow: 4px 2px 4px 1px #ccc;
+    box-shadow:         4px 2px 4px 1px #ccc;
+}
+#map {
+    border-radius: 5px;
+    justify-self: auto;
+}
+.container {
+    padding-top: 8px;
+    padding-bottom: 0px;
 }
