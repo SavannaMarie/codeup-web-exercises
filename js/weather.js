@@ -13,7 +13,6 @@ $(document).ready(function() {
             units: "imperial"
         })
             .done(function (city) {
-                // console.log(city);
 // Display the 5 day forecast
                 var displayWeather = '';
                 for (var n = 0; n < 5; n++) {
@@ -48,7 +47,6 @@ getWeather(coordinates);
 // quick search
     function weather(city) {
         var search = city.toString();
-        var currentWeather = [];
         $.get("http://api.openweathermap.org/data/2.5/weather", {
             APPID: WEATHER_MAP_TOKEN,
             q: search,
@@ -60,14 +58,13 @@ getWeather(coordinates);
             hours = hours % 12;
             var time = hours  + ":" + today.getMinutes() + " " + ampm;
             var displayWeather ="";
-            var name = data.name;
             var iconImage = "";
             iconImage += `<img style='margin: auto' width="30px" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png\n"/>`
             var clouds = data.weather[0].description;
             var newClouds = capitalize(clouds);
 
             displayWeather += `<p>`
-            displayWeather += `<b>${name}: </b> ${time}  `
+            displayWeather += `<b>${data.name}: </b> ${time}  `
             displayWeather += ` Temp: ${Math.round(data.main.temp)}°F `
             displayWeather += `${newClouds}`
             displayWeather += `${iconImage}`
@@ -75,9 +72,8 @@ getWeather(coordinates);
             displayWeather += ` Humidity: ${data.main.humidity}% `
             displayWeather += `</p>`
             $('#navSearch').html(displayWeather);
-            // console.log(data);
+            console.log(data);
         });
-        var searchResult = city;
     }
     var button = document.querySelector('#button')
     button.addEventListener('click', function (e) {
@@ -107,18 +103,47 @@ getWeather(coordinates);
         var lngLat = marker.getLngLat();
         getWeather(lngLat)
     })
-    // Instantiation of Popup object
+    // Popup object
 
-    // var popup = new mapboxgl.Popup()
-    //     .setLngLat(marker.getLngLat())
+    var popup = new mapboxgl.Popup()
+        .setLngLat(marker.getLngLat())
+        .setHTML("<p>Your Location</p>")
+        .setMaxWidth("200px")
+        .addTo(map);
+
+    console.log(popup)
+
+    marker.setPopup(popup);
+
+    function mapSearch(input) {
+        var search = input.toString();
+        $.get("http://api.openweathermap.org/data/2.5/weather", {
+            APPID: WEATHER_MAP_TOKEN,
+            q: search,
+            units: "imperial"
+        }).done(function (data) {
+           var coords = data.coord
+           var name = data.name;
+            console.log(data);
+            console.log(coords);
+            console.log(name);
+        });
+    }
+    var button2 = document.querySelector('#btn')
+    button2.addEventListener('click', function (e) {
+        e.preventDefault();
+        var searchResult = document.querySelector('#mapSearch').value;
+    mapSearch(searchResult);
+    });
+
+    // var popup2 = new mapboxgl.Popup()
+    //     .setLngLat(mapSearch());
     //     .setHTML("<p>Your Location</p>")
     //     .setMaxWidth("200px")
     //     .addTo(map);
     //
     // console.log(popup)
-
+    //
     // marker.setPopup(popup);
-    // popup.addClassName('popup-font');
 });
-
 
