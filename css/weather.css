@@ -3,6 +3,7 @@
 body {
     margin-bottom: 3em;
     font-family: 'Montserrat', sans-serif;
+    color: #191919;
 }
 .heading {
     font-family: 'Montserrat', sans-serif;
@@ -15,6 +16,7 @@ body {
   }
 p {
     font-size: 12px;
+    margin: 0;
 }
 .btn-1 {
     font-size: 15px;
@@ -72,11 +74,20 @@ p {
     padding: 0px;
 }
 .navSearch {
-    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
     height: 20px;
     width: 100%;
     padding: 0px;
+    margin: 0px 3px;
+    letter-spacing: .5px;
 
+}
+.name {
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 0px;
 }
 .smallNav {
     background: #a3a3a3;

@@ -69,12 +69,12 @@ getWeather(coordinates);
             var clouds = data.weather[0].description;
             var newClouds = capitalize(clouds);
 
-            displayWeather += `<p>`
-            displayWeather += `<b>${data.name}: </b> ${time}  `
-            displayWeather += ` Temp: ${Math.round(data.main.temp)}°F `
+            displayWeather += `<p class="navSearch">`
+            displayWeather += `<span class="name">${data.name}:</span>  ${time}&nbsp;&nbsp;&nbsp;  `
+            displayWeather += ` Temp: ${Math.round(data.main.temp)}°F&nbsp;&nbsp;&nbsp; `
             displayWeather += `${newClouds}`
-            displayWeather += `${iconImage}`
-            displayWeather += ` Hi: ${Math.round(data.main.temp_max)}°F Lo: ${Math.round(data.main.temp_min)}°F`
+            displayWeather += `${iconImage}&nbsp;&nbsp;&nbsp;`
+            displayWeather += ` Hi: ${Math.round(data.main.temp_max)}°F Lo: ${Math.round(data.main.temp_min)}°F&nbsp;&nbsp;&nbsp;`
             displayWeather += ` Humidity: ${data.main.humidity}% `
             displayWeather += `</p>`
             $('#navSearch').html(displayWeather);
