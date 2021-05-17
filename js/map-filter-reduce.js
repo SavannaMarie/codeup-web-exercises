@@ -48,38 +48,54 @@ console.log(usersEmails)
 
 // Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 
-let totalYears = users.reduce(function (total, user, index){
-    return total + itemPrice;
+let totalYears = users.reduce(function (total, user){
+    let yearsOfExperience = user.yearsOfExperience;
+    return total + yearsOfExperience;
+}, 0);
 
-});
-
-// let totalYears = users.reduce(function (total, user){
-//     return total + user.yearsOfExperience
-// });
-// console.log(totalYears);
-
-// var averageYears = yearsExperience.reduce(function (years, index, array) {
-//     years = years + years[index];
-//     if (index === array.length - 1) {
-//         return years/array.length;
-//     } else {
-//         return years;
-//     }
-// });
-//
-// console.log(averageYears)
+console.log(totalYears)
 
 // Use .reduce to get the longest email from the list of users.
 
+// same results as emails.map
+let emails = users.reduce(function (accumulator, user, index, usersArray) {
+    if (index === usersArray.length -1){
+        accumulator.push(user.email);
+        accumulator.sort(function (email1, email2) {
+            return email2.length - email1.length;
+        });
+        return accumulator[0];
+    } else {
+        accumulator.push(user.email);
+        return accumulator;
+    }
+}, []);
+console.log(emails);
+
+const longestEmails = users.reduce((longest, current) =>
+    longest.email.length > current.email.length ? longest : current ).email;
+console.log(longestEmails);
 
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-// let instructors = users.reduce(function (name, index){
-//     return name[index];
-// });
-//
-// console.log(instructors)
+let names = users.reduce(function(accumulator, user) {
+    accumulator.push(user.name);
+    return accumulator;
+}, [])
+let namesJoined = names.join(', ');
+
+let usersNames = users.reduce((accumulator, user, index, arr) => {
+    if (index === arr.length -1) {
+        accumulator += `${user.name}.`;
+    } else {
+        accumulator += `${user.name}, `;
+    }
+    return accumulator;
+},'Users names are: ');
+
+console.log(usersNames);
+
 
 
 
