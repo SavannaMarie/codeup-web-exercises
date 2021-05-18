@@ -23,7 +23,6 @@ const wait = ms => {
         }, ms);
     })
 };
-
 wait((1000)).then(message => console.log(message));
 wait((3000)).then(message => console.log(message));
 wait((4000)).then(message => console.log(message));
