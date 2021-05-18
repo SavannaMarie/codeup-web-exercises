@@ -96,23 +96,6 @@ let usersNames = users.reduce((accumulator, user, index, arr) => {
 
 console.log(usersNames);
 
-//======PROMISES
-//====new promise
- const myPromise = new Promise((fulfill, reject) => {
-    if (Math.random() > 0.5) {
-        fulfill();
-    } else {
-        reject();
-    }
-});
-console.log(myPromise)
-
-// .then for the good path .catch to catch the errors
-
-myPromise
-    .then(() => console.log('yay!'))
-    .catch(()=> console.log('aww!'));
-// myPromise.catch(()=> console.log('aww!'));  
 
 
 
