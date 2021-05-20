@@ -81,3 +81,14 @@ let patchOptions = {
 fetch('https://delicate-wood-medusaceratops.glitch.me/books/7', patchOptions).then(getBooks);
 
 getBooks();
+
+//DELETE
+let deleteOptions = {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+};
+
+fetch('https://delicate-wood-medusaceratops.glitch.me/books/15', deleteOptions).then(getBooks);
+
