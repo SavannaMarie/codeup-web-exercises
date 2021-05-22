@@ -98,6 +98,7 @@ h2 {
 }
 .card {
     margin-bottom: 10px;
+    padding-bottom: 10px;
     -moz-box-shadow:    4px 2px 4px 1px #ccc;
     -webkit-box-shadow: 4px 2px 4px 1px #ccc;
     box-shadow:         4px 2px 4px 1px #ccc;
