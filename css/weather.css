@@ -103,6 +103,9 @@ h2 {
     -webkit-box-shadow: 4px 2px 4px 1px #ccc;
     box-shadow:         4px 2px 4px 1px #ccc;
 }
+
+
+
 #map {
     border-radius: 5px;
     justify-self: auto;
