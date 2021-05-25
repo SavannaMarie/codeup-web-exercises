@@ -10,3 +10,7 @@ for (let i = 0; i <= 30; i++ ) {
         console.log(i);
     }
 }
+
+//Returns number 7
+const seven = () => console.log('7');
+seven()
