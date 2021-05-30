@@ -1,5 +1,6 @@
 "use strict";
 
+
 (function () {
     // So far we have talked about arrays as if they are static, and unchanging. This isn't the case. Today we'll be talking about how we can change our arrays without just reassigning the values.
 
@@ -8,6 +9,7 @@
      */
 
     // In the future, we maybe interacting with our data in a way where we won't be able to see it directly, so it's important to keep these methods and functions in mind when we start to create bigger and bigger applications.
+////////////
 
     /**
      * Audience: "So David, how can I add an element to an array?"
@@ -121,6 +123,7 @@
 
         // The slice method will work a lot like the substring method, in that it can return a value from either one or two arguments
 
+//
     var myFavCheeses = cheeses.slice(cheeses.indexOf("Muenster"), cheeses.indexOf("Kraft American Singles")+1);
 
     // By passing one argument, we start at the specified index and return an array to the end.
@@ -192,7 +195,7 @@
     // console.log(goldTeam);
     // console.log(staff);
 
-    // Which I can use to build..
+    // Which I can use to build.. some
 
     function removeAtIndex(array, index) {
         var arr1 = array.slice(0, index);
@@ -200,7 +203,7 @@
         return arr1.concat(arr2);
     }
 
-    // console.log(removeAtIndex(cheeses, cheeses.indexOf("Kraft American Singles")));
+      // console.log(removeAtIndex(cheeses, cheeses.indexOf("Kraft American Singles")));
     //
     // console.log(cheeses.splice(cheeses.indexOf("Kraft American Singles")));
 
