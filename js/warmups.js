@@ -31,7 +31,15 @@ console.log(five("the"));
 console.log(five("5"));
 
 
+const people = [
+    { name: 'test1', id: 1 , email: 'test1@test.com'},
+    { name: 'test2', id: 2 , email: 'test2@test.com' },
+    { name: 'test3', id: 3 , email: 'test3@test.com'},
+    { name: 'test4', id: 4 , email: 'test3@test.com'}
+];
 
+const person2 = people.find( person => person.id === 2 );
+console.log(person2); // { name: "test2", id: 2, email: "test2@test.com"}
 
 
 
