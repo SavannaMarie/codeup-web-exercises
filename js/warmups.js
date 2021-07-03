@@ -91,3 +91,17 @@ const source1 = { bb: 2, cc: 3};
 const source2 = { dd: 4, ee: 5};
 Object.assign(dest2, source1, source2);
 console.log(dest2);
+
+
+function animate_string(id)
+{
+    var element = document.getElementById(id);
+    var textNode = element.childNodes[0]; // assuming no other children
+    var text = textNode.data;
+
+    setInterval(function ()
+    {
+        text = text[text.length - 1] + text.substring(0, text.length - 1);
+        textNode.data = text;
+    }, 100);
+}
