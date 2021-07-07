@@ -131,3 +131,12 @@ function fToC(fahrenheit)
 }
 cToF(60);
 fToC(45);
+
+var gcd = function(a, b) {
+    if ( ! b) {
+        return a;
+    }
+
+    return gcd(b, a % b);
+};
+console.log(gcd(2154, 458));
