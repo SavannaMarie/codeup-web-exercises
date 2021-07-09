@@ -139,4 +139,6 @@ var gcd = function(a, b) {
 
     return gcd(b, a % b);
 };
+
+
 console.log(gcd(2154, 458));
