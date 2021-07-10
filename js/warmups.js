@@ -130,6 +130,8 @@ function fToC(fahrenheit)
     console.log(message);
 }
 cToF(60);
+
+
 fToC(45);
 
 var gcd = function(a, b) {
