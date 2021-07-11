@@ -114,14 +114,12 @@ console.log(leapyear(1800));
 console.log(leapyear(100));
 
 
-function cToF(celsius)
-{
+function cToF(celsius) {
     var cTemp = celsius;
     var cToFahr = cTemp * 9 / 5 + 32;
-    var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
     console.log(message);
 }
-
 function fToC(fahrenheit)
 {
     var fTemp = fahrenheit;
