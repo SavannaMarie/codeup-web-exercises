@@ -193,7 +193,7 @@
     //
     // console.log(alphaTeam);
     // console.log(goldTeam);
-    // console.log(staff);
+    console.log(staff);
 
     // Which I can use to build.. some
 
