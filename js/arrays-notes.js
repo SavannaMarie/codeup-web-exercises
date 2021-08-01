@@ -197,11 +197,11 @@
 
     // Which I can use to build.. some
 
-    // function removeAtIndex(array, index) {
-    //     var arr1 = array.slice(0, index);
-    //     var arr2 = array.slice(index + 1);
-    //     return arr1.concat(arr2);
-    // }
+    function removeAtIndex(array, index) {
+        var arr1 = array.slice(0, index);
+        var arr2 = array.slice(index + 1);
+        return arr1.concat(arr2);
+    }
 
       // console.log(removeAtIndex(cheeses, cheeses.indexOf("Kraft American Singles")));
     //
