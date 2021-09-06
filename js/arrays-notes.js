@@ -52,7 +52,7 @@
     cheeses.push("Colby Jack", "White Cheddar", "Havarti");
     cheeses.unshift("Red Windsor", "Ragstone", "Nut Rebel");
 
-    // logTheCheeses();
+    logTheCheeses();
 
     /**
      * Audience: "But David, just as you have showed us that we can create, can we not also
@@ -65,7 +65,7 @@
 
     cheeses.shift();
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // Unlike unshift, shift will remove the first element of an array.
 
@@ -73,7 +73,7 @@
 
     cheeses.pop();
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // Pop will lop off the last element of an array.
 
